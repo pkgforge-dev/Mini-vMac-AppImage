@@ -1,0 +1,48 @@
+# Maintainer: Alexander Jacocks <alexander@redhat.com>
+# Contributor: Lu Xu <oliver_lew@outlook.com>
+# Contributor: LIN Ruohshoei <lin dot ruohshoei plus archlinux at gmail dot com>
+# Contributor: Eric DeStefano <eric at ericdestefano dot com>
+# Contributor: Iñigo Alvarez <alvarezviu@gmail.com>
+# Contributor: William Termini <aur@termini.me>
+
+pkgname=minivmac-git
+_pkgname=minivmac
+pkgver=37.00.r0
+pkgrel=1
+pkgdesc="A miniature early Macintosh emulator"
+arch=('x86_64' 'aarch64')
+url="https://www.gryphel.com/c/minivmac/"
+license=('GPL2')
+depends=('bash' 'libx11' 'sdl3')
+options=('!debug' 'strip')
+source=("git+https://github.com/minivmac/minivmac"
+        minivmac.desktop)
+sha256sums=('SKIP'
+            'd734657c498539efe0f41b92242b42a3144492cbfb9ae75bac8f896a9245d91d')
+
+pkgver() {
+  cd clownmdemu
+  git describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+build() {
+  cd ${srcdir}/minivmac
+  mkdir -p bin
+  gcc setup/tool.c -o setup_t
+  source build_linux.sh
+  make
+}
+
+package() {
+  # icon and desktop entry
+  install -Dm644 "${srcdir}/${_pkgname}.desktop" "${pkgdir}/usr/share/applications/${_pkgname}.desktop"
+  install -Dm644 "${srcdir}/minivmac/src/ICONAPPW.ico" "${pkgdir}/usr/share/icons/hicolor/32x32/apps/${_pkgname}.ico"
+  cd ${_pkgname}
+  # install docs
+  install -dm755 "$pkgdir"/usr/share/doc/$_pkgname
+  install -m0644 COPYING.txt "$pkgdir"/usr/share/doc/$_pkgname/COPYING.txt
+  install -m0644 README.txt "$pkgdir"/usr/share/doc/$_pkgname/README.txt
+  # install all model-specific executables
+  install -dm755 "$pkgdir"/usr/bin/
+  install -Dm755 "${_pkgname}"* "$pkgdir"/usr/bin/
+}
