@@ -21,7 +21,7 @@ sha256sums=('SKIP'
             'd734657c498539efe0f41b92242b42a3144492cbfb9ae75bac8f896a9245d91d')
 
 pkgver() {
-  cd clownmdemu
+  cd ${srcdir}/minivmac
   git describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
