@@ -13,7 +13,7 @@ pkgdesc="A miniature early Macintosh emulator"
 arch=('x86_64' 'aarch64')
 url="https://www.gryphel.com/c/minivmac/"
 license=('GPL2')
-depends=('bash' 'libx11' 'sdl2-compat')
+depends=('libx11' 'sdl2')
 options=('!debug' 'strip')
 source=("git+https://github.com/minivmac/minivmac"
         minivmac.desktop)
