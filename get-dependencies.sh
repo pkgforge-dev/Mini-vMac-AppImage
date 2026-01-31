@@ -39,9 +39,6 @@ cd ./minivmac
 gcc setup/tool.c -o setup_t
 ./build_linux.sh
 
-# icon and desktop entry
-#install -Dm644 .AppDir/minivmac.desktop /usr/share/applications/minivmac.desktop
-#install -Dm644 src/ICONAPPW.ico /usr/share/icons/hicolor/32x32/apps/minivmac.ico
 # install docs
 install -dm755 /usr/share/doc/minivmac
 install -m0644 COPYING.txt /usr/share/doc/minivmac/COPYING.txt
