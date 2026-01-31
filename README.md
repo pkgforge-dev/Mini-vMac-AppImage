@@ -11,7 +11,7 @@
 </p>
 
 
-| Latest Stable Release | Upstream URL |
+| Latest Nightly Relase | Upstream URL |
 | :---: | :---: |
 | [Click here](https://github.com/pkgforge-dev/Mini-vMac-AppImage/releases/latest) | [Click here](https://github.com/minivmac/minivmac) |
 
