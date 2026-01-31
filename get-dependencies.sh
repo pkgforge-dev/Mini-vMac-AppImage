@@ -34,7 +34,7 @@ echo "$VERSION" > ~/version
 cd ./minivmac
 #mkdir -p bin
 gcc setup/tool.c -o setup_t
-ls
+#ls
 #source build_linux.sh
 ./build_linux.sh
 #make -j $(nproc)
