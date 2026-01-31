@@ -45,8 +45,9 @@ echo "$VERSION" > ~/version
 cd ./minivmac
 mkdir -p bin
 gcc setup/tool.c -o setup_t
-source build_linux.sh
-make -j $(nproc)
+#source build_linux.sh
+#make -j $(nproc)
+./build_linux.sh
 
 # icon and desktop entry
 install -Dm644 .AppDir/minivmac.desktop /usr/share/applications/minivmac.desktop
