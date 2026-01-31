@@ -23,7 +23,6 @@ get-debloated-pkgs --add-common --prefer-nano
 echo "Building Mini vMac..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/minivmac/minivmac"
-GRON="https://raw.githubusercontent.com/xonixx/gron.awk/refs/heads/main/gron.awk"
 
 echo "Making nightly build of Mini vMac..."
 	# Get the latest tag
