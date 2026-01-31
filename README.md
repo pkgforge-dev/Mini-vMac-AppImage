@@ -7,7 +7,7 @@
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Mini-vMac-AppImage)](https://github.com/pkgforge-dev/Mini-vMac-AppImage/releases/latest)
 
 <p align="center">
-  <img src="https://github.com/minivmac/minivmac/blob/master/src/ICONAPPW.ico?raw" width="128" />
+  <img src="https://github.com/minivmac.png" width="128" />
 </p>
 
 
