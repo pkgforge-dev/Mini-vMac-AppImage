@@ -9,7 +9,7 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     libdecor \
     libx11   \
-    sdl2
+    sdl3
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
