@@ -37,11 +37,5 @@ echo "$VERSION" > ~/version
 cd ./minivmac
 gcc setup/tool.c -o setup_t
 ./build_linux.sh
-
-# install docs
-install -dm755 /usr/share/doc/minivmac
-install -m0644 COPYING.txt /usr/share/doc/minivmac/COPYING.txt
-install -m0644 README.txt /usr/share/doc/minivmac/README.txt
 # install all model-specific executables
-install -dm755 /usr/bin/
-install -Dm755 "minivmac"* /usr/bin/
+cp -r "minivmac"* /usr/bin/
