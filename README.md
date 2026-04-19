@@ -3,7 +3,7 @@
 # Mini-vMac-AppImage 🐧
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Mini-vMac-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Mini-vMac-AppImage/releases/latest)
-[![CI Build Status](https://github.com//pkgforge-dev/Mini-vMac-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Mini-vMac-AppImage/releases/latest)
+[![CI Build Status](https://github.com/pkgforge-dev/Mini-vMac-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Mini-vMac-AppImage/releases/latest)
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Mini-vMac-AppImage)](https://github.com/pkgforge-dev/Mini-vMac-AppImage/releases/latest)
 
 <p align="center">
@@ -11,7 +11,7 @@
 </p>
 
 
-| Latest Nightly Relase | Upstream URL |
+| Latest Nightly Release | Upstream URL |
 | :---: | :---: |
 | [Click here](https://github.com/pkgforge-dev/Mini-vMac-AppImage/releases/latest) | [Click here](https://github.com/minivmac/minivmac) |
 
@@ -21,7 +21,7 @@
 
 ---
 
-AppImage made using [sharun](https://github.com/VHSgunzo/sharun) and its wrapper [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
+AppImage made using [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
 
 **This AppImage bundles everything and it should work on any Linux distro, including old and musl-based ones.**
 
