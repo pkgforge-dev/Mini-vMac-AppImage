@@ -18,19 +18,13 @@ get-debloated-pkgs --add-common --prefer-nano
 echo "Building Mini vMac..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/minivmac/minivmac"
-
-echo "Making nightly build of Mini vMac..."
-# Get the latest tag
 TAG=$(git ls-remote --tags --sort="v:refname" "$REPO" | tail -n1 | sed 's/.*\///; s/\^{}//')
-# Get the short hash
 HASH=$(git ls-remote "$REPO" HEAD | cut -c 1-8)
 VERSION="${TAG}-${HASH}"
 git clone "$REPO" ./minivmac
 echo "$VERSION" > ~/version
 
-# BUILD Mini vMac
 cd ./minivmac
 gcc setup/tool.c -o setup_t
 ./build_linux.sh
-# install all model-specific executables
 cp -r "minivmac"* /usr/bin/
