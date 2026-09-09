@@ -6,9 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm \
-    libx11 \
-    sdl3
+pacman -Syu --noconfirm libx11 sdl3
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
@@ -20,7 +18,7 @@ REPO="https://github.com/minivmac/minivmac"
 TAG=$(git ls-remote --tags --sort="v:refname" "$REPO" | tail -n1 | sed 's/.*\///; s/\^{}//')
 HASH=$(git ls-remote "$REPO" HEAD | cut -c 1-8)
 VERSION="${TAG}-${HASH}"
-git clone "$REPO" ./minivmac
+git clone --depth 1 "$REPO" ./minivmac
 echo "$VERSION" > ~/version
 
 cd ./minivmac
